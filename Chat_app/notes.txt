@@ -1,0 +1,13 @@
+################################Lecture-2################################### 
+
+Create WelcomeActivity
+
+Go to layout xml file and change layout to RelativeLayout.
+
+Replace DarkActionBar with NoActionBar from styles.xml file. We don't need action bar at the top.
+
+in colors.xml, replaced the values to my shades of blue. Just copy any color on google to get a shade. Select your colors from pallate.
+
+I'll be working with Firebase database. For using firebase we need to have a gmail account.
+
+Connect Android Studio to Gmail by logging in from Android studio. Small Icon at top right corner. Once we are logged in we can use Firebase database.
