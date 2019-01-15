@@ -11,3 +11,48 @@ in colors.xml, replaced the values to my shades of blue. Just copy any color on 
 I'll be working with Firebase database. For using firebase we need to have a gmail account.
 
 Connect Android Studio to Gmail by logging in from Android studio. Small Icon at top right corner. Once we are logged in we can use Firebase database.
+
+Click on Tools -> Firebase. This will open Firebase assistant.
+
+In Firebase asistant. Select Authentication -> Email and password authentication.
+
+Under email and pwd authentication tab -> Connect to Firebase -> opens a dailog box - connect to firebase.
+This creates a firebase project inside a firebase database by the name of ChatApp. This completes the first step.
+
+for Step 2, click on Add firebase authentication to your app. -> Accept changes.
+This adds authentication dependencies inside our app.
+
+Step 3 -> go back. Select realtime Database. Click on save and retrieve data.
+Click on Add the Realtime Database to your App.
+
+I got error : Failed to resolve: firebase-auth:16.0.1:15.0.0'
+Replaced this with  firebase-auth:16.0.1. i.e. Write : implementation 'com.google.firebase:firebase-auth:16.0.1:15.0.0' 
+
+
+Step 4-> Go back. Click on Cloud messaging. Setup firebase cloud messaging. Add FCM to your app.
+
+basically added these to gradle file :  
+    implementation 'com.google.firebase:firebase-auth:16.0.1'    
+    implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+
+
+
+
+
+
+Now, go on browser. go to https://firebase.google.com/
+On top right corner we have option "GO TO CONSOLE". Here we can see that our ChatApp Application is created successfully.
+
+Select the application. On left panel, we have our Authentication, database options.
+
+Click on Authentication - select "sign-in method"
+
+
+
+
+
+
+
+
+
