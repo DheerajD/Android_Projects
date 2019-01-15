@@ -46,7 +46,53 @@ On top right corner we have option "GO TO CONSOLE". Here we can see that our Cha
 
 Select the application. On left panel, we have our Authentication, database options.
 
-Click on Authentication - select "sign-in method"
+Click on Authentication - select "sign-in method".. This defines How we'll add sign in functionality to our system. 
+sign-in method will also have other options to sign in, like sign in using google. sign in using facebook etc..We'll be using these as well in our chat application.
+
+
+For now, we'll be working with email/pwd sign in.. click on email/pwd sign in and enable it. Email/pwd authentication is now enabled.
+
+
+
+##################################Lecture 3 ##################################
+
+In this we'll be adding a splash screen to our chatting application.. create an image which will be our splash screen. Add this img to drawable folder of our application.
+
+Inside activity_welcome.xml, add the following line in our relative layout :
+android:background="@drawable/chat_welcome_page"
+
+After this add code in WelcomeActivity.java
+
+	Thread thread = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    sleep(3000);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                finally {
+                   //Code to navigate to nect activity 
+		    Intent mainIntent = new Intent(WelcomeActivity.this, ChatMainActivity.class);
+                    startActivity(mainIntent);
+                }
+            }
+        };
+        thread.start();
+
+Above code will displa the splash screen for 3 seconds.. i.e the activity will sleep for 3000milliseconds using a thread. 
+Once 3 seconds are done we'll navigate to next activity. To navigate we'll write code in finally{} block.
+
+
+
+Our next activity be ChatMainActivity.java. This would have 3 parts, one the header, then 3 tabs and then the list of all chats.
+create new activity, ChatMainActivity. Change its layout to relativeLayout.
+
+
+########################################Lecture 4 ####################################
+We'll add user validations. If the user is valid/authorised, then only he'll be allowed to navigate to ChatMainActivity, else we'll give loggin error. 
+
+
 
 
 
