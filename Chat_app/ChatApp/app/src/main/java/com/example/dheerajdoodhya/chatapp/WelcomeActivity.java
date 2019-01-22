@@ -27,4 +27,9 @@ public class WelcomeActivity extends AppCompatActivity {
         };
         thread.start();
     }
+
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }

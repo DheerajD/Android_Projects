@@ -92,6 +92,22 @@ create new activity, ChatMainActivity. Change its layout to relativeLayout.
 ########################################Lecture 4 ####################################
 We'll add user validations. If the user is valid/authorised, then only he'll be allowed to navigate to ChatMainActivity, else we'll give loggin error. 
 
+;;;;;;;SOME PART REMAINING TO MAKE NOTES;;;;;;;;;;;;;;;;
+
+
+
+#####################################Lecture 5 ##################################################
+
+remove the textview added for demo purpose.
+Now on StartPage, we'll add two  buttons, one for logging in and one for signing out. 
+Create the 2 buttons, and do the required formatting.
+Register the Buttons to java activity file.
+When user clicks on Login activity, he is sent to login page. If he clicks on Signup, he is sent to SignUp activity.
+
+add onClickListener for both the buttons. 
+
+Create a new activity, LoginActivity, to allow existing user to login. First just add a text for testing. "This is login activity".
+Similarly create a RegisterActivity/sign up activity
 
 
 
