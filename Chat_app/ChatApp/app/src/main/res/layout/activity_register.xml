@@ -7,6 +7,10 @@
     android:background="@drawable/chat_login_register_page"
     tools:context=".RegisterActivity">
 
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/register_toolbar"/>
+
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"

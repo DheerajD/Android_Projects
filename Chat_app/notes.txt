@@ -110,6 +110,94 @@ Create a new activity, LoginActivity, to allow existing user to login. First jus
 Similarly create a RegisterActivity/sign up activity
 
 
+#####################################Lecture 6 #####################################################
+
+In this lecture we'll modify the login and register page, to add UI, text boxes and signup/login functionality. Add textboxes on register page to take name, email and pwd as input.
+Similarly do it for login page.
+
+#####################################Lecture 7 #####################################################
+
+    implementation 'com.android.support:design:28.0.0'
+
+add this in gradle.build file
+
+right click on "layout" folder in "res", click new, click "layout resource file". this is to create new layout resource file.
+add name - app_bar_layout.xml. this is to add toolbar at the top, which would contain the heading and a back button.
+
+Root element -> android.support.v7.widget.toolbar
+
+in this new layout file, in root element modify : android:layout_height="wrap_content"
+
+android:background="@color/colorPrimary"   
+
+Go to Component tree section of IDE and select toolbar from there. We'll add ID of this toolbar, ID of this toolbar be "main_app_bar"
+
+change theme of tool bar to ThemeOverlay.AppCompact.Dark.ActionBar
+
+
+
+go to activity_main.xml to add this toolbar...
+code to add toolbar :
+
+<include layout="@layout/app_bar_layout"
+        android:id="@+id/main_page_toolbar"/>
+
+On java class side add the following code : 
+	
+	 mToolbar = (Toolbar)findViewById(R.id.main_page_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("ChatApp");
+
+
+We also need to add this code on Login activity page.   
+
+add following code to 
+
+add following code in java class file :
+
+mToolbar = (Toolbar)findViewById(R.id.login_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("Sign In");
+
+
+add following code in layout file :
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/login_toolbar"/>
+
+
+
+Along with the title we need to add back button :
+
+go to AndroidManifest file and add a parent activity for login page. 
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".StartPageActivity"/>
+
+
+In login activity, add a call to         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+this would add a button to return to Home page on the left of icon.
+
+
+Add action bar in register activity as well.
+
+in layout file :
+<include layout="@layout/app_bar_layout"
+        android:id="@+id/register_toolbar"/>
+
+
+in AndroidManifest file :
+
+<activity android:name=".RegisterActivity"
+            android:parentActivityName=".StartPageActivity"></activity>
+ 
+
+
+
+
+
+
+
+
+
 
 
 
